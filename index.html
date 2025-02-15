@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Cards - Bootstrap</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    
+    body {
+      font-family: "Lexend Mega", serif;
+    }
+
+    @media (max-width: 767px) {
+      .carousel {
+        margin-bottom: 20px;
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+
+      .navbar-nav {
+        text-align: center;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .card{}
+       }
+
+   
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-item img {
+      object-fit: cover;
+      max-height: 500px;
+      width: 100%;
+    }
+
+    .navbar {
+      background-color: #343a40;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #fff;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff;
+    }
+
+    
+    #btn-checar-emails {
+      background-color: #ff9900;
+      border: none;
+      margin-top: 15px;
+    }
+
+    .card-header {
+      background-color: #007bff;
+      color: white;
+    }
+
+   
+    .card-img-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    
+    .card {
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border-style: none;
+    }
+
+    .card img{
+      max-height: 100%;
+      
+    }
+
+    .card-footer time {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="cabecalho">
+    <div class="navbar navbar-expand-lg">
+      <div class="container">
+        <h1 class="text-white">Site de produtos</h1>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse justify-content-end" id="menu">
+          <ul class="nav navbar-nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produtos">Produtos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#promocoes">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="btn-checar-emails" type="button" class="btn btn-warning">Checar caixa de mensagens</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagens/ele.jpg" alt="Imagem 1">
+      </div>
+      <div class="carousel-item">
+        <img src="imagens/empresa.avif" alt="Imagem 2">
+      </div>
+      <div class="carousel-item">
+        <img src="imagens/celular.jpg" alt="Imagem 3">
+      </div>
+    </div>
+  </div>
+
+  <div class="container conteiner-card">
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-header">
+              Cabeçalho do Header
+            </div>
+            <img src="./imagens/Alexa.jpg" class="card-img-top" alt="Alexa">
+            <div class="card-body">
+              <h5 class="card-title">Alexa</h5>
+              <p class="card-text">Conheça a Alexa, a inteligência que irá mudar o mundo.</p>
+              <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+            <footer class="card-footer">
+              <time>05/02/2025</time>
+            </footer>
+          </div>
+        </div>
+
+        
+        
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-bg-dark h-100">
+            <div class="card-header">
+              Cabeçalho do Header
+            </div>
+            <img src="imagens/apare.webp" class="card-img-top" alt="Aparelhos Eletrônicos">
+            <div class="card-body">
+              <h5 class="card-title">Tablett</h5>
+              <p class="card-text">Aparelhos eletrônicos de última geração.</p>
+              <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+            <footer class="card-footer">
+              <time>05/02/2025</time>
+            </footer>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-header">
+              Cabeçalho do Header
+            </div>
+            <img src="imagens/fone.webp" class="card-img-top" alt="Aparelhos Eletrônicos">
+            <div class="card-body">
+              <h5 class="card-title">Fone</h5>
+              <p class="card-text">Aparelhos eletrônicos de última geração.</p>
+              <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+            <footer class="card-footer">
+              <time>05/02/2025</time>
+            </footer>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-bg-dark h-100">
+            <div class="card-header">
+              Cabeçalho do Header
+            </div>
+            <img src="imagens/caixadesom.png" class="card-img-top" alt="Produto Exemplo">
+            <div class="card-body">
+              <h5 class="card-title">Caixa de som</h5>
+              <p class="card-text">Caixa de som, resistente a água e versátil.</p>
+              <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+            <footer class="card-footer">
+              <time>05/02/2025</time>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+              
+              
+   
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
